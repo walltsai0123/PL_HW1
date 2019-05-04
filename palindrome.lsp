@@ -1,0 +1,20 @@
+(defun palindrome(L)
+	(if (equal L '())
+		(format t "() is a palindrome.~%")
+		(progn
+			(setq R (reverse L))
+			(if (equal L R)
+				(format t "~A is a palindrome.~%" L)
+				(format t "~A isn't a palindrome.~%" L)
+			)
+		)
+	)
+)
+
+
+(terpri)
+(palindrome '(a b c) )
+(palindrome '(m a d a m))
+(palindrome '(cat dog))
+(palindrome '())
+(palindrome '(cat dog bird bird dog cat))
